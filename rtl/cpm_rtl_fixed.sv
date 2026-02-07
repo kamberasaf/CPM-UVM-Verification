@@ -1,6 +1,6 @@
 // ============================================================
-// CPM (Configurable Packet Modifier) - FIXED VERSION
-// This is a test version with proposed bug fixes applied
+// CPM (Configurable Packet Modifier) - Alternative RTL
+// This version includes proposed RTL changes for comparison.
 // ============================================================
 
 module cpm_fixed (
@@ -166,18 +166,13 @@ module cpm_fixed (
 
   assign status_busy = ctrl_enable && (s0.v || s1.v);
 
-  // ============== KEY FIX #1: Register Value Capture on Packet Acceptance ==============
-  // Hypothesis: Register values (mode, mask, add_const) may change between when
-  // packet is accepted and when transformation is computed.
-  // Fix: Capture register values at moment of packet acceptance in input
-  
+  // Register value capture on packet acceptance (mode, mask, add_const)
+  // so transformation uses values from acceptance time.
   logic [1:0]  captured_mode;
   logic [15:0] captured_mask;
   logic [15:0] captured_add_const;
-  
-  // ============== KEY FIX #2: Ensure Payload is Correctly Latched ==============
-  // Make sure the computed payload from compute_expected actually gets stored
-  // by explicitly assigning it in the same clock cycle and using captured registers
+
+  // Payload from compute_expected is assigned in the same cycle using captured registers.
   
   always_ff @(posedge clk) begin
     if (rst) begin
@@ -204,7 +199,7 @@ module cpm_fixed (
 
         // When both out_fire and in_fire same cycle: shift then load (or drop) in one place to avoid losing packet.
         if (out_fire && in_fire) begin
-          // Per-packet prints removed for quiet runs; re-add for RTL debug if needed
+          // Per-packet prints removed for quiet runs
           if (drop_en && (in_opcode == drop_opcode)) begin
             dropped_count <= dropped_count + 32'd1;
             s0 <= s1;

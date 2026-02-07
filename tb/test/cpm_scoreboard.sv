@@ -70,8 +70,7 @@ class cpm_scoreboard extends uvm_scoreboard;
     uvm_reg_data_t enable       = 0;
     cpm_seq_item expected_item;
 
-    // DEBUG: set to UVM_HIGH so normal runs stay quiet; use +UVM_VERBOSITY=UVM_HIGH to see
-    `uvm_info("SCB_DEBUG",
+    `uvm_info("SCB",
       $sformatf("write_in called: ID=%0h Op=%0h Payload=%0h | Queue_Before=%0d",
         item.id, item.opcode, item.payload, expected_queue.size()), UVM_HIGH)
 
@@ -128,7 +127,6 @@ class cpm_scoreboard extends uvm_scoreboard;
     // to use the mirrored CTRL value once that issue is resolved.
     enable      = 1'b1;
 
-    // DEBUG: set to UVM_HIGH so normal runs stay quiet
     `uvm_info("SCB_CFG",
       $sformatf("mode=%0d mask=%0h add_const=%0h drop_en=%0b drop_opcode=%0h enable=%0b",
         mode, mask, add_const, drop_en, drop_opcode, enable), UVM_HIGH)

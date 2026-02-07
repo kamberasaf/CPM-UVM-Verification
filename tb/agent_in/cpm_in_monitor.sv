@@ -34,8 +34,7 @@ class cpm_in_monitor extends uvm_monitor;
     forever begin
       @(posedge vif.clk);
 
-      // DEBUG: Log interface state
-      `uvm_info("IN_MON_DBG",
+      `uvm_info("IN_MON",
         $sformatf("In_Interface: valid=%0b ready=%0b id=%0h opcode=%0h payload=%0h | last_transfer=%0b",
           vif.valid, vif.ready, vif.id, vif.opcode, vif.payload, last_transfer), UVM_DEBUG)
 

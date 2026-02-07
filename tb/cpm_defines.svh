@@ -116,9 +116,9 @@
         `uvm_info("CPM_MSG", $sformatf msg, level) \
     end
 
-// Debug messages (UVM_DEBUG only)
+// Low-verbosity messages (UVM_DEBUG)
 `define CPM_DEBUG(msg) \
-    `uvm_info("CPM_DEBUG", $sformatf msg, UVM_DEBUG)
+    `uvm_info("CPM", $sformatf msg, UVM_DEBUG)
 
 // Info messages (default)
 `define CPM_INFO(msg) \
@@ -194,7 +194,7 @@ test_status_e g_test_status = TEST_RUNNING;
     end
 
 //===============================================================================
-// Waveform Dumping (for simulator-specific debugging)
+// Waveform Dumping (simulator-specific)
 //===============================================================================
 
 // Uncomment the appropriate section for your simulator

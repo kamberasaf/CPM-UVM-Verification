@@ -15,12 +15,12 @@ package cpm_pkg;
   int global_scb_drop_opcode = 0;
   
   // ==========================================================
-  // 1. REGISTER LAYER (Defined INLINE to fix dependencies)
+  // 1. REGISTER LAYER (defined inline for package order)
   // ==========================================================
   `include "ral/cpm_reg_item.sv"
   `include "ral/cpm_reg_model.sv"
 
-  // --- FIXED ADAPTER (Forces 32-bit access) ---
+  // Adapter: 32-bit access
   class cpm_reg_adapter extends uvm_reg_adapter;
     `uvm_object_utils(cpm_reg_adapter)
     function new(string name="cpm_reg_adapter");
@@ -40,11 +40,11 @@ package cpm_pkg;
       rw.addr = item.addr;
       rw.data = item.write_en ? item.wdata : item.rdata;
       rw.status = UVM_IS_OK;
-      rw.n_bits = 32; rw.byte_en = 4'hF; // CRITICAL FIX
+      rw.n_bits = 32; rw.byte_en = 4'hF;
     endfunction
   endclass
 
-  // --- FIXED DRIVER (Handshake Protocol) ---
+  // Register driver (handshake protocol)
   class cpm_reg_driver extends uvm_driver #(cpm_reg_item);
     `uvm_component_utils(cpm_reg_driver)
     virtual cpm_reg_if vif;
@@ -92,7 +92,7 @@ package cpm_pkg;
   `include "env/cpm_env.sv"
 
   // ==========================================================
-  // 3. SEQUENCES (Defined INLINE to fix Coverage/Scoreboard)
+  // 3. SEQUENCES (defined inline for coverage/scoreboard order)
   // ==========================================================
   `include "seq/cpm_base_seqs.sv" // Must define base_traffic_seq first
 
