@@ -30,7 +30,13 @@ class cpm_reg_adapter extends uvm_reg_adapter;
     rw.data = item.write_en ? item.wdata : item.rdata;
     rw.status = UVM_IS_OK;
 
+<<<<<<< HEAD
     rw.n_bits = 32;
     rw.byte_en = 4'hF;
+=======
+    rw.n_bits = 32;       // Force 32-bit width
+    rw.byte_en = 4'hF;    // Force 4-byte enable (matches register map)
+    // ====================
+>>>>>>> 039a218325725816f7450277206503b41188e757
   endfunction
 endclass
