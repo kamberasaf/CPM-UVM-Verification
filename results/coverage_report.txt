@@ -1,0 +1,142 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cpm_pkg
+=== Design Unit: work.cpm_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      2        na        na   100.00%
+        Coverpoints/Crosses          6        na        na        na
+            Covergroup Bins         25        25         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cpm_pkg/cpm_coverage/cpm_cg                    100.00%        100          -    Covered              
+    covered/total bins:                                    21         21          -                      
+    missing/total bins:                                     0         21          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_mode                                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin MODE_PASS                                      50          1          -    Covered              
+        bin MODE_XOR                                       50          1          -    Covered              
+        bin MODE_ADD                                     4500          1          -    Covered              
+        bin MODE_ROT                                       50          1          -    Covered              
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low                                           666          1          -    Covered              
+        bin mid                                          1344          1          -    Covered              
+        bin high                                         2640          1          -    Covered              
+    Coverpoint cp_drop                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin not_dropped                                  2650          1          -    Covered              
+        bin dropped                                      2000          1          -    Covered              
+    Cross mode_x_opcode                               100.00%        100          -    Covered              
+        covered/total bins:                                12         12          -                      
+        missing/total bins:                                 0         12          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <MODE_ROT,high>                             7          1          -    Covered              
+            bin <MODE_ADD,high>                          2617          1          -    Covered              
+            bin <MODE_XOR,high>                             8          1          -    Covered              
+            bin <MODE_PASS,high>                            8          1          -    Covered              
+            bin <MODE_ROT,mid>                             29          1          -    Covered              
+            bin <MODE_ADD,mid>                           1260          1          -    Covered              
+            bin <MODE_XOR,mid>                             28          1          -    Covered              
+            bin <MODE_PASS,mid>                            27          1          -    Covered              
+            bin <MODE_ROT,low>                             14          1          -    Covered              
+            bin <MODE_ADD,low>                            623          1          -    Covered              
+            bin <MODE_XOR,low>                             14          1          -    Covered              
+            bin <MODE_PASS,low>                            15          1          -    Covered              
+ TYPE /cpm_pkg/cpm_coverage/stall_cg                  100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_in_stall                            100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_stall                                  1721887          1          -    Covered              
+        bin stalled                                      1245          1          -    Covered              
+    Coverpoint cp_out_stall                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_stall                                  1722507          1          -    Covered              
+        bin stalled                                       625          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cpm_pkg/cpm_coverage/cpm_cg                    100.00%        100          -    Covered              
+    covered/total bins:                                    21         21          -                      
+    missing/total bins:                                     0         21          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_mode                                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin MODE_PASS                                      50          1          -    Covered              
+        bin MODE_XOR                                       50          1          -    Covered              
+        bin MODE_ADD                                     4500          1          -    Covered              
+        bin MODE_ROT                                       50          1          -    Covered              
+    Coverpoint cp_opcode                              100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low                                           666          1          -    Covered              
+        bin mid                                          1344          1          -    Covered              
+        bin high                                         2640          1          -    Covered              
+    Coverpoint cp_drop                                100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin not_dropped                                  2650          1          -    Covered              
+        bin dropped                                      2000          1          -    Covered              
+    Cross mode_x_opcode                               100.00%        100          -    Covered              
+        covered/total bins:                                12         12          -                      
+        missing/total bins:                                 0         12          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <MODE_ROT,high>                             7          1          -    Covered              
+            bin <MODE_ADD,high>                          2617          1          -    Covered              
+            bin <MODE_XOR,high>                             8          1          -    Covered              
+            bin <MODE_PASS,high>                            8          1          -    Covered              
+            bin <MODE_ROT,mid>                             29          1          -    Covered              
+            bin <MODE_ADD,mid>                           1260          1          -    Covered              
+            bin <MODE_XOR,mid>                             28          1          -    Covered              
+            bin <MODE_PASS,mid>                            27          1          -    Covered              
+            bin <MODE_ROT,low>                             14          1          -    Covered              
+            bin <MODE_ADD,low>                            623          1          -    Covered              
+            bin <MODE_XOR,low>                             14          1          -    Covered              
+            bin <MODE_PASS,low>                            15          1          -    Covered              
+ TYPE /cpm_pkg/cpm_coverage/stall_cg                  100.00%        100          -    Covered              
+    covered/total bins:                                     4          4          -                      
+    missing/total bins:                                     0          4          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint cp_in_stall                            100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_stall                                  1721887          1          -    Covered              
+        bin stalled                                      1245          1          -    Covered              
+    Coverpoint cp_out_stall                           100.00%        100          -    Covered              
+        covered/total bins:                                 2          2          -                      
+        missing/total bins:                                 0          2          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin no_stall                                  1722507          1          -    Covered              
+        bin stalled                                       625          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 2
+
+Total Coverage By Instance (filtered view): 100.00%
+

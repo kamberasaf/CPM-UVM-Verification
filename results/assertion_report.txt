@@ -1,0 +1,59 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /cpm_tb/in_vif
+=== Design Unit: work.cpm_stream_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         1         2    33.33%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/cpm_tb/in_vif/ASSERT_STABILITY_VALID
+                     cpm_if.sv(50)                   1011          1
+/cpm_tb/in_vif/ASSERT_STABILITY_DATA
+                     cpm_if.sv(53)                   1011          1
+/cpm_tb/in_vif/ASSERT_LIVENESS_BOUND
+                     cpm_if.sv(81)                      0          1
+
+=================================================================================
+=== Instance: /cpm_tb/out_vif
+=== Design Unit: work.cpm_stream_if
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       3         1         2    33.33%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/cpm_tb/out_vif/ASSERT_STABILITY_VALID
+                     cpm_if.sv(50)                    327          1
+/cpm_tb/out_vif/ASSERT_STABILITY_DATA
+                     cpm_if.sv(53)                    198          1
+/cpm_tb/out_vif/ASSERT_LIVENESS_BOUND
+                     cpm_if.sv(81)                      0          1
+
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/cpm_tb/in_vif/ASSERT_STABILITY_VALID
+                     cpm_if.sv(50)                   1011          1
+/cpm_tb/in_vif/ASSERT_STABILITY_DATA
+                     cpm_if.sv(53)                   1011          1
+/cpm_tb/in_vif/ASSERT_LIVENESS_BOUND
+                     cpm_if.sv(81)                      0          1
+/cpm_tb/out_vif/ASSERT_STABILITY_VALID
+                     cpm_if.sv(50)                    327          1
+/cpm_tb/out_vif/ASSERT_STABILITY_DATA
+                     cpm_if.sv(53)                    198          1
+/cpm_tb/out_vif/ASSERT_LIVENESS_BOUND
+                     cpm_if.sv(81)                      0          1
+
+Total Coverage By Instance (filtered view): 33.33%
+
