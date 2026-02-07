@@ -2,6 +2,9 @@
 
 **Author:** Asaf Kamber  
 **Design:** Configurable Packet Modifier (CPM)  
+
+This repo contains the UVM testbench and deliverables for the CPM verification final project (source, verification plan, reports, bug tracker). Zip this repo for course submission; clone for local run.
+
 **Deliverables:** Full source (UVM TB + assertions + RAL), verification plan, coverage report, assertion report, reflection report.
 
 ---
@@ -36,9 +39,9 @@
 
 ### From Questa GUI
 
-1. Open Questa and change to this folder (the submission root):
+1. Open Questa and change to this folder (repo root):
    ```
-   cd <path-to-Submitted-files>
+   cd <path-to-CPM-UVM-Verification>
    ```
 2. *(Optional)* Clean and recompile:
    ```
@@ -101,8 +104,10 @@ Verification was run against the **original RTL** (`cpm_rtl.sv`) without modifyi
 ## File Layout (for reference)
 
 ```
-Submitted-files/
+CPM-UVM-Verification/
 ├── README.md
+├── .gitignore
+├── .gitattributes
 ├── Bug-Tracker-Asaf Kamber.xlsx
 ├── Verification-Plan-CPM.pdf
 ├── Reflection_Report.pdf
